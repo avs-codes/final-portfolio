@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hello World!</title>
+   
+    <script src="/script.js" defer></script>
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,500;0,800;1,100;1,500;1,800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/style.css" />
+    
+  </head>
+  
+  <body>
+  <section id="grid-wrapper">
+      
+    <header>
+        
+      <a href="index.html" id='name'>alex silva</a>
+      
+     <div id="a-container">
+     
+        <a id="work" href="work.html">work</a>
+        <a id="about" href="about.html">about</a>
+        <a id="contact" href="contact.html">contact</a>
+       
+      </div> 
+        
+    </header>
+    <div id="shader-container">
+      
+   
+    <canvas class="my-canvas"></canvas>
+    <script type="module">
+      import {sculptToMinimalRenderer} from 'https://unpkg.com/shader-park-core@0.0.270/dist/shader-park-core.esm.js';
+
+      // Try switching out ./spCode3.js with ./spCode1.js etc.
+      import {spCode} from './spCode.js';
+      let canvas = document.querySelector('.my-canvas');
+      
+      let state = {
+        buttonHover: 0.0,
+        currButtonHover: 0.0,
+        click: 0.0,
+        currClick: 0.0
+      };
+      
+      // This converts your Shader Park code into a shader and renders it to the my-canvas element
+      sculptToMinimalRenderer(canvas, spCode, () => {
+        state.currButtonHover = state.currButtonHover*.999 + state.buttonHover*.001;
+        state.currClick = state.currClick*.92 + state.click*.08;
+        return {
+          'buttonHover' : state.currButtonHover,
+          'click' : state.currClick
+        };
+      });
+    </script>
+      </div> 
+    
+    <p id="mini-bio">
+     hi! i'm alex, a visual designer & coder based in nyc. 
+    </p> 
+    
+    <h1>
+      selected work
+    </h1>
+    
+    <div id="selected-img">
+      <a href="expressive.html"><img src="selected.jpg" /></a>
+      <p id="selected-caption">
+        Lifesaver, revived
+      </p>
+    </div>
+    
+    
+  </section> 
+  </body>
+</html>

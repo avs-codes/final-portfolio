@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hello World!</title>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,500;0,800;1,100;1,500;1,800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/style.css" />
+    
+    <script src="/work.js" defer></script>
+   <script>
+    $(document).ready(function(){
+        $("#coding-subhead").click(function(){
+            $("#coding-wrapper").slideToggle();
+        });
+      
+        $("#coding-subhead").click(function() {
+          $("#coding-arrow").toggleClass("rotate-reset");
+          $("#coding-arrow").toggleClass("rotate");
+          });
+      
+      $("#branding-subhead").click(function(){
+            $("#branding-wrapper").slideToggle();
+        });
+      
+       $("#branding-subhead").click(function() {
+          $("#branding-arrow").toggleClass("rotate-reset");
+          $("#branding-arrow").toggleClass("rotate");
+          });
+      
+      $("#type-subhead").click(function(){
+            $("#type-wrapper").slideToggle();
+        });
+      
+       $("#type-subhead").click(function() {
+          $("#type-arrow").toggleClass("rotate-reset");
+          $("#type-arrow").toggleClass("rotate");
+          });
+      
+      $("#d-subhead").click(function(){
+            $("#d-wrapper").slideToggle();
+        });
+      
+       $("#d-subhead").click(function() {
+          $("#d-arrow").toggleClass("rotate-reset");
+          $("#d-arrow").toggleClass("rotate");
+          });
+      
+    });
+</script>
+    
+  </head>
+  
+  <body>
+  <section id="grid-wrapper">
+      
+    <header>
+        
+      <a href="index.html" id='name'>alex silva</a>
+        
+      <div id="a-container">
+     
+        <a id="work" href="work.html">work</a>
+        <a id="about" href="about.html">about</a>
+        <a id="contact" href="contact.html">contact</a>
+       
+      </div> 
+        
+    </header>
+    
+
+  
+    <section id="list-container">
+    
+    <p id="coding-subhead" class="subhead">coding<a id="coding-arrow" class="arrow">&darr;</a></p>
+      
+      <div id="coding-wrapper" class="wrapper">
+      
+      <ul>
+        <li><a id="expressive" href="expressive.html">lifesaver, revived</a></li>
+        <li><a id="about" href="about.html">about me</a></li>
+        <li><a id="toy" href="toy.html">plant timer</a></li>  
+      </ul> 
+        
+      </div>   
+      
+    <p id="branding-subhead" class="subhead">branding<a id="branding-arrow" class="arrow">&darr;</a></p>
+      
+     <div id="branding-wrapper"> 
+      
+      <ul>
+        <li><a href="dumpster.html">dumpster diving</a></li>
+        <li><a href="copernicus.html">copernicus</a></li> 
+      </ul> 
+      
+      </div> 
+       
+    <p id="type-subhead" class="subhead">typography<a id="type-arrow" class="arrow">&darr;</a></p>
+      
+    <div id="type-wrapper">
+     
+      <ul>
+        <li><a href="xefer.html">wiki branches</a></li>
+        <li><a href="mantra-merch.html">malding</a></li>
+        <li><a href="toy.html">plant timer</a></li> 
+      </ul> 
+      
+    </div>  
+      
+    <p id="d-subhead" class="subhead">3D<a id="d-arrow" class="arrow">&darr;</a></p>  
+      
+     <div id="d-wrapper"> 
+      
+      <ul>
+        <li><a href="liminalism.html">liminalism</a></li>
+      </ul> 
+      
+     </div>  
+         
+    </section>
+    
+  </section> 
+    
+     <section id="preview-container">
+    
+    <img src="" id="preview"/>
+    
+    </section>
+    
+  </body>
+</html>
