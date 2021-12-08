@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 export function spCode()  {
     let noiseScale = 5.2;
    
